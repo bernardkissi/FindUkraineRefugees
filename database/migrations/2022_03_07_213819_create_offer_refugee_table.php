@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('offer_refugee', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('refugee_id')->unsigned()->nullable()->index()->constrained('refugees');
+            $table->string('name')->nullable();
+            $table->string('number')->nullable();
+            $table->foreignId('offers_id')->unsigned()->index()->constrained('offers');
+
             $table->timestamps();
         });
     }

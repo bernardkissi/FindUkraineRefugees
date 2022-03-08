@@ -22,7 +22,7 @@ return new class extends Migration {
             $table->string('refugee_number')->nullable();
 
             $table->string('notified');
-            $table->dateTime('notifiedAt');
+            $table->dateTime('notifiedAt')->nullable();
 
             $table->timestamps();
         });
