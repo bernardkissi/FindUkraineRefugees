@@ -14,7 +14,7 @@ return new class extends Migration {
     {
         Schema::create('refugees', function (Blueprint $table) {
             $table->id();
-
+            $table->uuid('identifier');
             $table->string('name');
             $table->string('profile')->nullable();
             $table->string('number')->nullable();

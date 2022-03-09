@@ -2,13 +2,16 @@
 
 namespace App\Models;
 
+use App\Models\Traits\UuidGenerator;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Refugee extends Model
 {
-    use HasFactory;
+    use
+    UuidGenerator,
+    HasFactory;
 
     protected $fillable = [
         'name',

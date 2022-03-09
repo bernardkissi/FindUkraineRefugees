@@ -14,7 +14,7 @@ return new class extends Migration {
     {
         Schema::create('track_refugees', function (Blueprint $table) {
             $table->id();
-
+            $table->uuid('identifier');
             $table->string('email')->nullable();
             $table->string('number');
 
